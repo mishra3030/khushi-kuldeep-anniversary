@@ -1,0 +1,932 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khushi & Kuldeep | First Anniversary</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink: #f8dce5;
+  --light: #fff8fa;
+  --rose: #d995aa;
+  --deep: #9c6479;
+  --text: #654653;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--light);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+section {
+  padding: 75px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(38px, 7vw, 58px);
+  color: var(--deep);
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #987985;
+  line-height: 1.8;
+  margin: 0 auto 30px;
+}
+
+/* WELCOME SCREEN */
+
+#welcome {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 20px;
+  background: linear-gradient(145deg, #fff1f5, #f4d5df, #fff8fa);
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 1.5s ease;
+}
+
+.small-heading {
+  letter-spacing: 4px;
+  font-size: 11px;
+  color: var(--deep);
+  text-transform: uppercase;
+}
+
+.welcome-names {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(55px, 12vw, 95px);
+  color: var(--deep);
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+.welcome-content p {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.main-btn {
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  background: var(--deep);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px #b77e9238;
+  transition: .3s;
+}
+
+.main-btn:hover {
+  transform: translateY(-3px);
+  background: #805064;
+}
+
+.petal {
+  position: absolute;
+  color: #d995aa;
+  opacity: .45;
+  animation: float 8s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-35px) rotate(25deg); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* HERO */
+
+.hero {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#fff1f5d9, #f8dce5d9),
+    url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1500&q=85') center/cover;
+  padding: 70px 20px;
+}
+
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(55px, 12vw, 95px);
+  color: var(--deep);
+  line-height: 1.2;
+}
+
+.hero p {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  margin-top: 15px;
+  color: #805064;
+}
+
+/* INTRO */
+
+.intro {
+  background: #fff8fa;
+}
+
+.intro p {
+  max-width: 650px;
+  margin: 20px auto;
+  line-height: 2;
+  font-size: 14px;
+}
+
+/* TOGETHERNESS COUNTER */
+
+.countdown {
+  background: linear-gradient(135deg, #f8dce5, #fff2f5);
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 35px 0;
+}
+
+.time-box {
+  background: rgba(255,255,255,.85);
+  padding: 23px 18px;
+  min-width: 100px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px #b65f7e18;
+}
+
+.time-box strong {
+  display: block;
+  font-size: 35px;
+  color: var(--deep);
+  font-family: 'Playfair Display', serif;
+}
+
+.time-box span {
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+#countdownMessage {
+  margin-top: 15px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
+  color: var(--deep);
+}
+
+/* GALLERY */
+
+.gallery {
+  background: #fffaf9;
+}
+
+.gallery-grid {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px #b65f7e20;
+  transition: .4s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.025);
+}
+
+/* SCRATCH SURPRISE */
+
+.surprise {
+  background: linear-gradient(135deg, #fff0f4, #f8dce5);
+}
+
+.scratch-card {
+  width: min(100%, 450px);
+  height: 230px;
+  margin: 30px auto 10px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px #a76a7d25;
+  background: white;
+}
+
+.scratch-message {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: #fffafc;
+}
+
+.scratch-message h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 34px;
+  color: var(--deep);
+  margin-bottom: 12px;
+}
+
+.scratch-message p {
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+#scratchCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.scratch-hint {
+  font-size: 12px;
+  color: var(--deep);
+  margin-top: 15px;
+}
+
+/* ENVELOPES */
+
+.envelopes {
+  background: #fff8fa;
+}
+
+.envelope-grid {
+  max-width: 850px;
+  margin: 35px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  gap: 18px;
+}
+
+.envelope {
+  border: 1px solid #e8bdcb;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #fff, #fff0f4);
+  padding: 25px 10px;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0 6px 18px #b65f7e12;
+}
+
+.envelope:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px #b65f7e25;
+}
+
+.envelope .symbol {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.envelope h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  color: var(--deep);
+  line-height: 1.5;
+}
+
+.envelope p {
+  font-size: 10px;
+  margin-top: 8px;
+  color: #a77b89;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: #4b2636a8;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff8fa;
+  width: min(100%, 430px);
+  padding: 35px 25px;
+  border-radius: 20px;
+  position: relative;
+  animation: fadeUp .4s ease;
+}
+
+.modal-content h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 37px;
+  color: var(--deep);
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  font-size: 14px;
+  line-height: 2;
+}
+
+.close-btn {
+  position: absolute;
+  right: 17px;
+  top: 12px;
+  border: none;
+  background: none;
+  color: var(--deep);
+  font-size: 27px;
+  cursor: pointer;
+}
+
+/* LETTER */
+
+.letter {
+  background: linear-gradient(135deg, #f8dce5, #fff3f6);
+}
+
+.letter-paper {
+  max-width: 700px;
+  margin: 30px auto 0;
+  padding: 35px 28px;
+  background: #fffdfb;
+  border-radius: 12px;
+  box-shadow: 0 10px 35px #a76a7d20;
+  text-align: left;
+  border: 1px solid #f0d5dd;
+}
+
+.letter-paper h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  color: var(--deep);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.letter-paper p {
+  font-size: 14px;
+  line-height: 2.1;
+  margin-bottom: 15px;
+}
+
+.signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 29px !important;
+  color: var(--deep);
+  text-align: right;
+  margin-top: 25px;
+}
+
+/* FINAL CELEBRATION */
+
+.final {
+  min-height: 65vh;
+  background: linear-gradient(145deg, #fff1f5, #f1ceda);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.final h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(48px, 10vw, 75px);
+  color: var(--deep);
+  margin-bottom: 20px;
+}
+
+.final p {
+  max-width: 550px;
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 25px;
+}
+
+footer {
+  background: #9c6479;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* CONFETTI */
+
+.confetti {
+  position: fixed;
+  top: -15px;
+  z-index: 2000;
+  pointer-events: none;
+  animation: fall 4s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@media(max-width: 500px) {
+  section {
+    padding: 60px 17px;
+  }
+
+  .time-box {
+    min-width: 42%;
+    padding: 18px 10px;
+  }
+
+  .time-box strong {
+    font-size: 30px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .gallery-grid img {
+    height: 190px;
+  }
+
+  .letter-paper {
+    padding: 28px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- WELCOME SCREEN -->
+
+<section id="welcome">
+  <div class="petal" style="top:15%;left:12%;font-size:35px;">✿</div>
+  <div class="petal" style="top:65%;right:12%;font-size:40px;">❀</div>
+  <div class="petal" style="top:25%;right:20%;font-size:25px;">✧</div>
+
+  <div class="welcome-content">
+    <div class="small-heading">A Celebration of Love</div>
+    <h1 class="welcome-names">Khushi & Kuldeep</h1>
+    <p>One beautiful year, countless precious memories.</p>
+    <button class="main-btn" onclick="enterWebsite()">
+      Open Your Surprise ♡
+    </button>
+  </div>
+</section>
+
+<main id="mainContent" style="display:none;">
+
+<!-- HERO -->
+
+<section class="hero">
+  <p>CELEBRATING ONE BEAUTIFUL YEAR</p>
+  <h1>Happy First Anniversary</h1>
+  <p>Khushi & Kuldeep</p>
+</section>
+
+<!-- INTRO -->
+
+<section class="intro">
+  <h2 class="section-title">A Beautiful Beginning</h2>
+  <p>
+    Some journeys become special not because of where they lead,
+    but because of the person we share them with.
+    One year ago, a beautiful journey began.
+    Today, we celebrate the memories, laughter and love
+    that made this first year so precious.
+  </p>
+</section>
+
+<!-- LIVE COUNTER -->
+
+<section class="countdown">
+  <h2 class="section-title">Our Time Together</h2>
+  <p class="subtitle">Every second is another beautiful memory</p>
+
+  <p style="font-family:'Playfair Display',serif;
+            font-size:17px;margin-bottom:25px;color:#9c6479;">
+    Together Since 24 November 2025
+  </p>
+
+  <div class="timer">
+    <div class="time-box">
+      <strong id="days">0</strong>
+      <span>DAYS</span>
+    </div>
+
+    <div class="time-box">
+      <strong id="hours">00</strong>
+      <span>HOURS</span>
+    </div>
+
+    <div class="time-box">
+      <strong id="minutes">00</strong>
+      <span>MINUTES</span>
+    </div>
+
+    <div class="time-box">
+      <strong id="seconds">00</strong>
+      <span>SECONDS</span>
+    </div>
+  </div>
+
+  <div id="countdownMessage">
+    And our beautiful journey continues...
+  </div>
+</section>
+
+<!-- WEDDING GALLERY -->
+
+<section class="gallery">
+  <h2 class="section-title">Our Beautiful Memories</h2>
+  <p class="subtitle">
+    A little collection of moments worth remembering
+  </p>
+
+  <div class="gallery-grid">
+    <!-- Replace these image links with the couple's wedding photos -->
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=85" alt="Wedding memory 1">
+
+    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=85" alt="Wedding memory 2">
+
+    <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=700&q=85" alt="Wedding memory 3">
+
+    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=700&q=85" alt="Wedding memory 4">
+
+    <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=700&q=85" alt="Wedding memory 5">
+
+    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=700&q=85" alt="Wedding memory 6">
+  </div>
+</section>
+
+<!-- SCRATCH SURPRISE -->
+
+<section class="surprise">
+  <h2 class="section-title">A Little Surprise</h2>
+  <p class="subtitle">There is something special waiting underneath...</p>
+
+  <div class="scratch-card">
+    <div class="scratch-message">
+      <h3>A Message From The Heart</h3>
+      <p>
+        Tumhare saath zindagi ka har pal aur bhi khoobsurat lagta hai.
+        Yeh pehla saal toh bas ek shuruaat hai,
+        abhi toh saath mein poori zindagi bitani hai!
+      </p>
+    </div>
+    <canvas id="scratchCanvas"></canvas>
+  </div>
+
+  <p class="scratch-hint">♡ Gently scratch the card to reveal your surprise ♡</p>
+</section>
+
+<!-- FIVE ENVELOPES -->
+
+<section class="envelopes">
+  <h2 class="section-title">Little Notes, Big Love</h2>
+  <p class="subtitle">
+    Five little envelopes, each holding a special message
+  </p>
+
+  <div class="envelope-grid">
+
+    <div class="envelope" onclick="openEnvelope(0)">
+      <div class="symbol">✉</div>
+      <h3>Ek Chhota Sa Paighaam</h3>
+      <p>Tap to open</p>
+    </div>
+
+    <div class="envelope" onclick="openEnvelope(1)">
+      <div class="symbol">✉</div>
+      <h3>Hamari Khoobsurat Yaadein</h3>
+      <p>Tap to open</p>
+    </div>
+
+    <div class="envelope" onclick="openEnvelope(2)">
+      <div class="symbol">✉</div>
+      <h3>Dil Se Ek Dua</h3>
+      <p>Tap to open</p>
+    </div>
+
+    <div class="envelope" onclick="openEnvelope(3)">
+      <div class="symbol">✉</div>
+      <h3>Ek Special Reminder</h3>
+      <p>Tap to open</p>
+    </div>
+
+    <div class="envelope" onclick="openEnvelope(4)">
+      <div class="symbol">✉</div>
+      <h3>Anniversary Ki Badhai</h3>
+      <p>Tap to open</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ENVELOPE POPUP -->
+
+<div class="modal" id="envelopeModal" onclick="closeEnvelope(event)">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeEnvelope()">×</button>
+    <h2 id="envelopeTitle"></h2>
+    <p id="envelopeMessage"></p>
+  </div>
+</div>
+
+<!-- PERSONAL LETTER -->
+
+<section class="letter">
+  <h2 class="section-title">A Letter For You</h2>
+  <p class="subtitle">Some feelings deserve to be written down</p>
+
+  <div class="letter-paper">
+    <h3>Dear Khushi,</h3>
+
+    <p>
+      Dekhte hi dekhte humari shaadi ko ek saal ho gaya.
+      Yeh ek saal apni chhoti-chhoti khushiyon,
+      khoobsurat yaadon aur saath bitaye hue palon ke liye
+      mere liye bahut khaas raha hai.
+    </p>
+
+    <p>
+      Tumhara saath meri zindagi ko aur bhi khoobsurat bana deta hai.
+      Main bas yahi chahta hoon ki hum hamesha ek-doosre ka
+      saath nibhate rahein, har khushi aur har mushkil mein
+      ek-doosre ke saath khade rahein.
+    </p>
+
+    <p>
+      Happy First Anniversary!
+      Yeh pehla saal humari zindagi ki ek khoobsurat shuruaat hai.
+      Aane wale har saal mein aur bhi pyaari yaadein banani hain.
+    </p>
+
+    <p class="signature">
+      Hamesha Tumhara,<br>
+      Kuldeep
+    </p>
+  </div>
+</section>
+
+<!-- FINAL CELEBRATION -->
+
+<section class="final">
+  <h2>Happy Anniversary!</h2>
+  <p>
+    One year down, forever to go.
+    May every new chapter bring more happiness,
+    laughter and beautiful memories.
+  </p>
+
+  <button class="main-btn" onclick="celebrate()">
+    Celebrate This Beautiful Day ✨
+  </button>
+</section>
+
+<footer>
+  MADE WITH LOVE TO CELEBRATE KHUSHI & KULDEEP
+</footer>
+
+</main>
+
+<!-- BACKGROUND MUSIC -->
+
+<audio id="backgroundMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+/* WELCOME SCREEN */
+
+function enterWebsite() {
+  document.getElementById('welcome').style.display = 'none';
+  document.getElementById('mainContent').style.display = 'block';
+
+  const music = document.getElementById('backgroundMusic');
+  music.play().catch(() => {
+    console.log('Music will play when browser permits playback.');
+  });
+
+  window.scrollTo(0, 0);
+}
+
+/* LIVE TOGETHERNESS COUNTER */
+
+const weddingDate = new Date(2025, 10, 24, 0, 0, 0);
+
+function updateTogetherness() {
+  const now = new Date();
+  const difference = Math.max(0, now - weddingDate);
+
+  const totalSeconds = Math.floor(difference / 1000);
+
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  document.getElementById('days').textContent = days;
+
+  document.getElementById('hours').textContent =
+    String(hours).padStart(2, '0');
+
+  document.getElementById('minutes').textContent =
+    String(minutes).padStart(2, '0');
+
+  document.getElementById('seconds').textContent =
+    String(seconds).padStart(2, '0');
+}
+
+updateTogetherness();
+setInterval(updateTogetherness, 1000);
+
+/* ENVELOPE MESSAGES */
+
+const envelopeMessages = [
+  {
+    title: "Ek Chhota Sa Paighaam",
+    message: "Bas itna kehna hai ki tumhara saath meri zindagi ko aur bhi khoobsurat bana deta hai."
+  },
+  {
+    title: "Hamari Khoobsurat Yaadein",
+    message: "Woh shaadi ka din aur usse judi saari yaadein… aaj bhi dil mein bilkul waise hi basi hui hain."
+  },
+  {
+    title: "Dil Se Ek Dua",
+    message: "Bas yahi dua hai ki humari zindagi mein khushiyan bani rahein aur hum har mod par ek-doosre ka saath nibhate rahein."
+  },
+  {
+    title: "Ek Special Reminder",
+    message: "Saalo ka safar chahe kitna bhi lamba ho jaaye, tum mere liye hamesha utni hi khaas rahogi."
+  },
+  {
+    title: "Anniversary Ki Badhai",
+    message: "Happy First Anniversary! Tumhare saath bitaya hua yeh pehla saal bahut khoobsurat raha. Abhi toh zindagi bhar ki yaadein banani hain!"
+  }
+];
+
+function openEnvelope(index) {
+  document.getElementById('envelopeTitle').textContent =
+    envelopeMessages[index].title;
+
+  document.getElementById('envelopeMessage').textContent =
+    envelopeMessages[index].message;
+
+  document.getElementById('envelopeModal').classList.add('show');
+}
+
+function closeEnvelope(event) {
+  if (
+    !event ||
+    event.target.id === 'envelopeModal' ||
+    event.target.classList.contains('close-btn')
+  ) {
+    document.getElementById('envelopeModal').classList.remove('show');
+  }
+}
+
+/* SCRATCH CARD */
+
+const canvas = document.getElementById('scratchCanvas');
+const ctx = canvas.getContext('2d');
+
+function setupScratchCard() {
+  const rect = canvas.getBoundingClientRect();
+  const ratio = window.devicePixelRatio || 1;
+
+  canvas.width = rect.width * ratio;
+  canvas.height = rect.height * ratio;
+
+  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+  const gradient = ctx.createLinearGradient(0, 0, rect.width, rect.height);
+  gradient.addColorStop(0, '#d995aa');
+  gradient.addColorStop(1, '#f4cbd8');
+
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, rect.width, rect.height);
+
+  ctx.fillStyle = '#ffffff';
+  ctx.textAlign = 'center';
+  ctx.font = '24px Playfair Display';
+  ctx.fillText('A Little Surprise', rect.width / 2, rect.height / 2 - 8);
+
+  ctx.font = '12px Poppins';
+  ctx.fillText('Scratch here to reveal', rect.width / 2, rect.height / 2 + 22);
+}
+
+setupScratchCard();
+
+let scratching = false;
+let scratchFinished = false;
+
+function scratchAt(event) {
+  if (!scratching || scratchFinished) return;
+
+  const rect = canvas.getBoundingClientRect();
+  const x = event.clientX - rect.left;
+  const y = event.clientY - rect.top;
+
+  ctx.globalCompositeOperation = 'destination-out';
+  ctx.beginPath();
+  ctx.arc(x, y, 22, 0, Math.PI * 2);
+  ctx.fill();
+
+  checkScratchProgress();
+}
+
+function checkScratchProgress() {
+  const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+  let transparent = 0;
+
+  for (let i = 3; i < pixels.length; i += 4) {
+    if (pixels[i] === 0) transparent++;
+  }
+
+  if (transparent / (pixels.length / 4) > 0.45) {
+    scratchFinished = true;
+    canvas.style.transition = 'opacity .8s';
+    canvas.style.opacity = '0';
+
+    setTimeout(() => {
+      canvas.style.display = 'none';
+    }, 850);
+  }
+}
+
+canvas.addEventListener('pointerdown', (event) => {
+  scratching = true;
+  canvas.setPointerCapture(event.pointerId);
+  scratchAt(event);
+});
+
+canvas.addEventListener('pointermove', scratchAt);
+
+canvas.addEventListener('pointerup', () => {
+  scratching = false;
+});
+
+canvas.addEventListener('pointercancel', () => {
+  scratching = false;
+});
+
+/* CELEBRATION CONFETTI */
+
+function celebrate() {
+  for (let i = 0; i < 65; i++) {
+    const piece = document.createElement('div');
+    piece.className = 'confetti';
+    piece.textContent = ['✦', '✿', '♥', '❀', '✨'][Math.floor(Math.
